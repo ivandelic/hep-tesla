@@ -1,4 +1,4 @@
-package hr.hep.tesla.common.model;
+package hr.hep.tesla.powerplant.registry.model;
 
 
 import java.io.Serializable;

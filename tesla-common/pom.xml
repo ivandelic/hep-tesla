@@ -5,9 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>hr.hep.tesla</groupId>
-		<artifactId>hep-tesla</artifactId>
+		<artifactId>tesla</artifactId>
 		<version>0.1.1</version>
-		<relativePath>../hep-tesla</relativePath>
+		<relativePath>../</relativePath>
 	</parent>
 	<artifactId>tesla-common</artifactId>
 	<name>tesla-common</name>
@@ -16,7 +16,31 @@
 		<dependency>
 			<groupId>jakarta.persistence</groupId>
 			<artifactId>jakarta.persistence-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-libs</id>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jboss.jandex</groupId>
+				<artifactId>jandex-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>make-index</id>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

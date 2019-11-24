@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" 
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="tesla-powerplant-registry" transaction-type="JTA">
+		<jta-data-source>tesla-powerplant-registry-orcl-ds</jta-data-source>
+		
+		<class>hr.hep.tesla.powerplant.registry.model.Powerplant</class>
+		<class>hr.hep.tesla.powerplant.registry.model.Region</class>
+		<class>hr.hep.tesla.common.model.TeslaEntity</class>
+        
+        <properties> 
+            <property name="eclipselink.deploy-on-startup" value="true"/>
+            <property name="eclipselink.jdbc.native-sql" value="true"/>
+            <property name="eclipselink.logging.logger" value="JavaLogger"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.OraclePlatform"/> 
+            <property name="eclipselink.target-server" value="io.helidon.integrations.cdi.eclipselink.CDISEPlatform"/> 
+            <property name="eclipselink.weaving" value="false"/> 
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+            <property name="eclipselink.create-ddl-jdbc-file-name" value="tesla-powerplant-registry-create-ddl.jdbc"/>
+			<property name="eclipselink.drop-ddl-jdbc-file-name" value="tesla-powerplant-registry-drop-ddl.jdbc"/>
+			<property name="eclipselink.ddl-generation.output-mode" value="sql-script"/>
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,13 +1,11 @@
 package hr.hep.tesla.powerplant.registry.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-import hr.hep.tesla.common.model.TeslaEntity;
-
-@Table
+@Entity
 public class Region extends TeslaEntity {
 
 	private static final long serialVersionUID = 1L;
