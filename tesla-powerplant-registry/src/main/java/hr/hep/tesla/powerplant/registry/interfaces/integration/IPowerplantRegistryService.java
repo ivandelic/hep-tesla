@@ -1,19 +1,31 @@
 package hr.hep.tesla.powerplant.registry.interfaces.integration;
 
-import javax.ws.rs.core.Response;
+import java.util.List;
 
+import hr.hep.tesla.common.exception.TeslaException;
 import hr.hep.tesla.powerplant.registry.model.Powerplant;
+import hr.hep.tesla.powerplant.registry.model.Region;
 
 public interface IPowerplantRegistryService {
 
-	public Response listPowerplants();
+	public List<Powerplant> listPowerplants();
 
 	public Powerplant readPowerplant(Integer id);
 
-	public Response updatePowerplant(Powerplant powerplant);
+	public Powerplant updatePowerplant(Powerplant powerplant) throws TeslaException;
 
-	public Powerplant createPowerplant(Powerplant powerplant);
+	public Powerplant createPowerplant(Powerplant powerplant) throws TeslaException;
 
-	public Response deletePowerplant(Powerplant powerplant);
+	public Powerplant deletePowerplant(Integer id) throws TeslaException;
+
+	public List<Region> listRegions();
+
+	public Region readRegion(Integer id);
+
+	public Region updateRegion(Region region) throws TeslaException;
+
+	public Region createRegion(Region region) throws TeslaException;
+
+	public Region deleteRegion(Integer id) throws TeslaException;
 
 }

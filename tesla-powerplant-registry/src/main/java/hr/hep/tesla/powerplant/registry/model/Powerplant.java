@@ -6,18 +6,20 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQuery(name = "readPowerplant", query = "select P from Powerplant P where P.id = :id")
+@NamedQuery(name = "listPowerplants", query = "select P from Powerplant P where P.archived = false order by P.created desc")
 public class Powerplant extends TeslaEntity {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
 
 	@Enumerated(EnumType.STRING)

@@ -1,6 +1,5 @@
 package hr.hep.tesla.powerplant.registry.model;
 
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -18,7 +17,7 @@ public abstract class TeslaEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Version
-	private Timestamp updated;
+	private Timestamp vesion;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date created;
@@ -27,29 +26,16 @@ public abstract class TeslaEntity implements Serializable {
 	private boolean archived = false;
 
 	@PrePersist
-	protected void onCreate()
-	{
+	protected void onCreate() {
 		created = new Date();
 	}
-	
-	public Timestamp getUpdated()
-	{
-		return updated;
+
+	public Timestamp getVesion() {
+		return vesion;
 	}
 
-	public void setUpdated(Timestamp updated)
-	{
-		this.updated = updated;
-	}
-
-	public Date getCreated()
-	{
+	public Date getCreated() {
 		return created;
-	}
-
-	public void setCreated(Date created)
-	{
-		this.created = created;
 	}
 
 	public boolean isArchived() {
@@ -59,5 +45,5 @@ public abstract class TeslaEntity implements Serializable {
 	public void setArchived(boolean archived) {
 		this.archived = archived;
 	}
-	
+
 }
