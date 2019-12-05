@@ -12,6 +12,6 @@ javax:
             tesla-powerplant-registry-orcl-ds:
                 dataSourceClassName: oracle.jdbc.pool.OracleDataSource
                 dataSource:
-                    url: jdbc:oracle:thin:@db201910222048_high?TNS_ADMIN=C:\\Users\\idelic\\Downloads\\Wallet_DB201910222048
-                    user: ADMIN
-                    password: welcomeToOracle1234Cloud
+                    url: jdbc:oracle:thin:@db201910222048_high
+                    user:
+                    password:
