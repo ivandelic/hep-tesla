@@ -19,12 +19,15 @@ import hr.hep.tesla.powerplant.registry.model.Region;
 @Dependent
 public class PowerplantRegistryInformation implements IPowerplantRegistryInformation {
 
-	@PersistenceContext
+	@PersistenceContext()
 	private EntityManager em;
 
 	@Override
 	public List<Powerplant> listPowerplants() {
-		return queryItems("listPowerplants", null, Powerplant.class);
+		em.clear(); // FIXME witchcraft clearing em!
+		List<Powerplant> pp = queryItems("listPowerplants", null, Powerplant.class);
+
+		return pp;
 	}
 
 	@Override
