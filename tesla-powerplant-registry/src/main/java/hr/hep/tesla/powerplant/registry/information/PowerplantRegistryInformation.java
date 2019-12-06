@@ -44,6 +44,7 @@ public class PowerplantRegistryInformation implements IPowerplantRegistryInforma
 			throw new TeslaException(MessageCode.ERROR_GENERAL_MISSING_ID_UPDATE);
 
 		powerplant = em.merge(powerplant);
+		em.flush();
 
 		return powerplant;
 	}
@@ -57,6 +58,7 @@ public class PowerplantRegistryInformation implements IPowerplantRegistryInforma
 			throw new TeslaException(MessageCode.ERROR_GENERAL_PROVIDED_ID_INSERT);
 
 		powerplant = em.merge(powerplant);
+		em.flush();
 
 		return powerplant;
 	}
@@ -71,6 +73,7 @@ public class PowerplantRegistryInformation implements IPowerplantRegistryInforma
 		powerplant.setArchived(true);
 
 		powerplant = em.merge(powerplant);
+		em.flush();
 
 		return powerplant;
 	}
@@ -97,6 +100,7 @@ public class PowerplantRegistryInformation implements IPowerplantRegistryInforma
 			throw new TeslaException(MessageCode.ERROR_GENERAL_MISSING_ID_UPDATE);
 
 		region = em.merge(region);
+		em.flush();
 
 		return region;
 	}
@@ -110,6 +114,7 @@ public class PowerplantRegistryInformation implements IPowerplantRegistryInforma
 			throw new TeslaException(MessageCode.ERROR_GENERAL_PROVIDED_ID_INSERT);
 
 		region = em.merge(region);
+		em.flush();
 
 		return region;
 	}
@@ -124,6 +129,7 @@ public class PowerplantRegistryInformation implements IPowerplantRegistryInforma
 		region.setArchived(true);
 
 		region = em.merge(region);
+		em.flush();
 
 		return region;
 	}
