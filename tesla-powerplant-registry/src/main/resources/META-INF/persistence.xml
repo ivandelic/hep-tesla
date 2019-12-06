@@ -23,6 +23,7 @@
             <property name="eclipselink.create-ddl-jdbc-file-name" value="tesla-powerplant-registry-create-ddl.jdbc"/>
 			<property name="eclipselink.drop-ddl-jdbc-file-name" value="tesla-powerplant-registry-drop-ddl.jdbc"/>
 			<property name="eclipselink.ddl-generation.output-mode" value="sql-script"/>
+			<property name="eclipselink.cache.shared.default" value="false"/>
         </properties>
     </persistence-unit>
 </persistence>
