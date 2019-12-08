@@ -6,7 +6,7 @@ ADD tesla-powerplant-registry tesla-powerplant-registry
 RUN mvn package -DskipTests
 RUN echo "Maven package done!"
 
-FROM oraseemeaceeadriatics/hep-tesla:latest
+FROM eu-frankfurt-1.ocir.io/oraseemeaceeociworkshop/ivandelic/hep/tesla-base-image:latest
 WORKDIR /tesla
 ENV TNS_ADMIN="/wallet"
 ENV JAVAX_SQL_DATASOURCE_TESLA_dash_POWERPLANT_dash_REGISTRY_dash_ORCL_dash_DS_DATASOURCE_USER=""
