@@ -48,4 +48,4 @@ node/
 user.txt
 ObjectStore/
 PutObjectStoreDirHere/
-wallet/
+config/
