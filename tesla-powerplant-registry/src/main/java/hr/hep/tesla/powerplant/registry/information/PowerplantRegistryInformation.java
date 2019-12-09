@@ -19,7 +19,7 @@ import hr.hep.tesla.powerplant.registry.model.Region;
 @Dependent
 public class PowerplantRegistryInformation implements IPowerplantRegistryInformation {
 
-	@PersistenceContext()
+	@PersistenceContext(unitName = "tesla-powerplant-registry-persistence")
 	private EntityManager em;
 
 	@Override

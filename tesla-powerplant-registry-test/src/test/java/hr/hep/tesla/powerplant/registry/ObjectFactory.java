@@ -6,19 +6,19 @@ import hr.hep.tesla.powerplant.registry.model.Region;
 
 public class ObjectFactory {
 
-	public static Region createRegon(String name) {
+	public static Region createRegon() {
 		Region region = new Region();
-		region.setName(name);
+		region.setName("Test Region");
 
 		return region;
 	}
 
-	public static Powerplant createPowerplant(String name, Integer power) {
+	public static Powerplant createPowerplant() {
 		Powerplant powerplant = new Powerplant();
-		powerplant.setName(name);
-		powerplant.setPower(power);
+		powerplant.setName("Test Powerplant");
+		powerplant.setPower(999);
 		powerplant.setType(PowerplantType.COAL);
-		powerplant.setRegion(createRegon("Istarska Županija"));
+		powerplant.setRegion(createRegon());
 
 		return powerplant;
 	}

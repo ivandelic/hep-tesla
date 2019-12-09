@@ -3,12 +3,6 @@ server:
 javax:
     sql:
         DataSource:
-            tesla-powerplant-registry-h2-ds:
-                dataSourceClassName: org.h2.jdbcx.JdbcDataSource
-                dataSource:
-                    url: jdbc:h2:~/h2tesla;MODE=Oracle
-                    user: sa
-                    password: ""
             tesla-powerplant-registry-orcl-ds:
                 dataSourceClassName: oracle.jdbc.pool.OracleDataSource
                 dataSource:
