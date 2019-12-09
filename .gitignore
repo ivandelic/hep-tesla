@@ -49,3 +49,4 @@ user.txt
 ObjectStore/
 PutObjectStoreDirHere/
 config/
+secret/
