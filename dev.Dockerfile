@@ -4,6 +4,7 @@ ADD pom.xml .
 ADD tesla-common tesla-common
 ADD tesla-powerplant-registry tesla-powerplant-registry
 ADD tesla-powerplant-registry-dev tesla-powerplant-registry-dev
+ADD tesla-powerplant-registry-test tesla-powerplant-registry-test
 RUN mvn package -DskipTests
 RUN echo "Maven package done!"
 
